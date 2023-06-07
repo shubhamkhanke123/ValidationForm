@@ -1,0 +1,55 @@
+<div class="page">
+    <div class="box">
+      <div class="heading">
+        <h2>{{isSignin? 'Sign in to ' : 'Welcome to '}}Company Name</h2>
+      </div>
+      <ng-container *ngIf="isSignin" >
+         <div class="form">
+        <div class="name">
+          <label for="nameSignIn">Name :</label>
+          <input type="text" name="nameSignIn" id="nameSignIn" class="inp" >
+        </div>
+        <div class="password">
+          <label for="passwordSignIn">Password : </label>
+          <input type="text" name="password" id="passwordSignIn" class="inp" >
+        </div>
+      </div>
+      <div class="buttons">
+        <button (click)="submit()" >Sign In</button>
+        <p *ngIf="!userExistance" >Not a Registered user? <span (click)="register()" >Register Now</span> </p>
+        <p *ngIf="userExistance" >Invalid Credentials</p>
+      </div>
+      </ng-container>
+      <ng-container *ngIf="!isSignin" >
+         <div class="form">
+        <div class="name">
+          <label for="name">Name :</label>
+          <input type="text" name="name" id="name" class="inp" >
+        </div>
+        <div class="email">
+          <label for="email">Email :</label>
+          <input type="text" name="email" id="email" class="inp" >
+        </div>
+        <div class="mobile_number">
+          <label for="mobileNumber">Mobile :</label>
+          <input type="text" name="mobileNumber" id="mobileNumber" class="inp" >
+        </div>
+        <div class="password">
+          <label for="password">Password : </label>
+          <input type="text" name="password" id="password" class="inp" >
+        </div>
+      </div>
+      <div class="buttons">
+        <button *ngIf="!registeredButton" (click)="create()" >{{registered}}</button>
+        <button *ngIf="registeredButton" (click)="register()" >{{registered}}</button>
+        <p *ngIf="!userExistance" >By Clicking on Register you Accept to Our <span>T&C</span>
+        <br>Already an User? <span (click)="register()" >Sign In</span></p>
+        <p *ngIf="userExistance" >User Already Exists !</p>
+      </div>
+      </ng-container>
+    </div>
+    <div class="logo">
+      <img src="" alt="companyLogo">
+    </div>
+  </div>
+  

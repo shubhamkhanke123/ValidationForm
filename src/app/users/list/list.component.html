@@ -1,0 +1,34 @@
+<div class="page">
+    <div class="heading">
+      <h1>
+        List of users
+      </h1>
+      <p (click)="logout()" >Logout</p>
+    </div>
+    <hr color="skyblue" >
+    <div class="list">
+      <ng-container *ngFor="let user of userList" >
+        <div class="profile">
+          <div class="img">
+            <img src="../../../assets/icons/Profile.svg" alt="not here">
+          </div>
+          <div class="details">
+            <div class="name">
+              <label for="name">Name :</label>
+              <input type="text" id="name" value="{{user.name}}" readonly >
+            </div>
+            <div class="email">
+              <label for="email">Email :</label>
+              <input type="text" id="email" value="{{user.email}}" readonly >
+            </div>
+            <div class="mobile">
+              <label for="mobile">Mobile :</label>
+              <input type="text" id="mobile" value="{{user.mobile}}" readonly >
+            </div>
+          </div>
+        </div>
+      </ng-container>
+  
+    </div>
+  </div>
+  

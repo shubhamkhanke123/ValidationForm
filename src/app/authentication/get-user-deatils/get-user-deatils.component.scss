@@ -1,0 +1,94 @@
+// *{
+//   font-family: 'Segoe UI Light';
+// }
+.page{
+  // border: 2px solid black;
+  width: 99.6vw;
+  height: 99.6vh;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.box{
+  border: 7px solid skyblue;
+  width: 27%;
+  height: 60%;
+  margin-left: 150px;
+  border-radius: 40px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.heading{
+  // border: 2px solid red;
+  height: 20%;
+  // text-align: center;
+  color: skyblue;
+}
+.form{
+  // border: 2px solid red;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name, .password, .mobile_number, .email{
+  // border: 2px solid red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  // margin-bottom: 20px;
+  label{
+    width: 25%;
+    // border: 2px solid red;
+    text-align: right;
+  }
+  input{
+    border: 1px solid gray;
+    padding: 5px;
+    border-radius: 10px;
+    width: 70%;
+  }
+}
+
+.buttons{
+  // border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  button{
+    background-color: white;
+    border: 3px solid skyblue;
+    padding: 7px;
+    width: fit-content;
+    border-radius: 12px;
+    &:hover{
+      background-color: skyblue;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  }
+  p{
+    font-size: small;
+    color: #707070;
+    text-align: center;
+    span{
+      cursor: pointer;
+      color: blue;
+    }
+  }
+}
+.logo{
+  width: 200px;
+  height: 200px;
+  border: 5px solid skyblue;
+  border-radius: 40px;
+  margin-right: 20%;
+  padding: 20px;
+}
